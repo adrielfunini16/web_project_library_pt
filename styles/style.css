@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 .page {
   min-width: 1100px;
   max-width: 1600px;
@@ -45,7 +48,14 @@
 .nav__link {
   color: #000000;
   text-decoration: none;
+  transition: color 0.2s ease, border-bottom-color 0.2s ease;
+  padding-bottom: 2px;
+  border-bottom: 1.8px solid transparent;
   font-weight: bold;
+}
+.nav__link:hover {
+  color: #057bf2;
+  border-bottom-color: #057bf2;
 }
 
 .header__content {
@@ -118,6 +128,7 @@
   max-width: 760px;
   margin: auto;
   margin-top: 68px;
+  margin-bottom: 40px;
   padding-left: 0;
   justify-content: center;
   flex-wrap: wrap;
@@ -132,6 +143,12 @@
   box-sizing: border-box;
   width: 360px;
   height: 420px;
+  transition: all 0.3s ease;
+}
+.card:hover {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
+  transform: scale(1.03);
 }
 
 .card__content {
@@ -312,6 +329,7 @@
 .membership__steps {
   list-style-type: none;
   padding: 0;
+  column-gap: 40px;
   margin: 100px 0 0;
   display: flex;
   justify-content: center;
@@ -320,7 +338,6 @@
 
 .step {
   flex-basis: 220px;
-  margin: 40px;
   justify-content: space-evenly;
   align-content: center;
 }
@@ -388,14 +405,21 @@
 }
 
 .footer__column-link {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
   color: white;
   text-decoration: none;
+  transition: color 0.2s ease;
+}
+.footer__column-link:hover {
+  color: #057bf2;
+  transform: scale(1.08);
 }
 
 .footer__social-icon {
   width: 16px;
   height: 16px;
-  margin-right: 10px;
 }
 
 .footer__copyright {
